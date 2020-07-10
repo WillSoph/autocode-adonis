@@ -7,15 +7,20 @@ Route.get('/', () => {
   return { greeting: 'Hello world in JSON' }
 })
 
+Route.get('/products', 'ProductsController.index')
 
-// Route.get('/admin/users', 'UserController.index')
-// Route.get('/admin/users/:id', 'UserController.show')
-// Route.post('/admin/users', 'UserController.store')
-// Route.delete('/admin/users/:id', 'UserController.destroy').middleware('auth')
 
 Route.post('/auths', 'AuthController.store')
 Route.post('/users', 'UserController.store')
 
+Route.post('/admin/users/:id/uploads', 'UserController.changePhoto')
+Route.get('/admin/users/:id/photo', 'UserController.photo')
+
+
 Route.group(() => {
   Route.resource('users', 'UserController').apiOnly()
-}).prefix('admin').middleware(['auth'])
+}).prefix('admin')
+
+// Route.group(() => {
+//   Route.resource('users', 'UserController').apiOnly()
+// }).prefix('admin').middleware(['auth'])
