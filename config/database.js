@@ -52,15 +52,15 @@ module.exports = {
       // user: Env.get('DB_USER', 'root'),
       // password: Env.get('DB_PASSWORD', ''),
       // database: Env.get('DB_DATABASE', 'adonis')
-      host: Env.get('DB_HOST', CLEARDB_DATABASE_URL.host),
-      port: Env.get('DB_PORT', ''),
-      user: Env.get('DB_USER', CLEARDB_DATABASE_URL.username),
-      password: Env.get('DB_PASSWORD', CLEARDB_DATABASE_URL.password),
-      database: Env.get('DB_DATABASE', CLEARDB_DATABASE_URL.pathname.substr(1))
-      // host: "us-cdbr-east-05.cleardb.net",
-      // user: "b5412e08d8468d",
-      // password: "9479261d",
-      // database: "heroku_0be97d671790a17"
+      // host: Env.get('DB_HOST', CLEARDB_DATABASE_URL.host),
+      // port: Env.get('DB_PORT', ''),
+      // user: Env.get('DB_USER', CLEARDB_DATABASE_URL.username),
+      // password: Env.get('DB_PASSWORD', CLEARDB_DATABASE_URL.password),
+      // database: Env.get('DB_DATABASE', CLEARDB_DATABASE_URL.pathname.substr(1))
+      host: "us-cdbr-east-05.cleardb.net",
+      user: "b5412e08d8468d",
+      password: "9479261d",
+      database: "heroku_0be97d671790a17"
     },
     debug: Env.get('DB_DEBUG', false)
   },
