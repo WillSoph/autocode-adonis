@@ -30,6 +30,11 @@ class RegisterController {
    * @param {View} ctx.view
    */
   async create({ request, response, view }) {
+    const data = request.only(['name', 'email', 'password'])
+
+    const user = await User.create(data)
+
+    return user
   }
 
   /**
@@ -43,7 +48,7 @@ class RegisterController {
   async store({ request }) {
     const data = request.only(['name', 'email', 'password'])
 
-    const user = await user.create(data)
+    const user = await User.create(data)
 
     return user
   }
