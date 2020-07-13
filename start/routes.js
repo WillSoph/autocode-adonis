@@ -12,7 +12,7 @@ Route.get('/products', 'ProductsController.index')
 
 Route.post('/auths', 'AuthController.store')
 Route.post('/users', 'UserController.store')
-
+Route.post('/register', 'RegisterController.store')
 Route.post('/admin/users/:id/uploads', 'UserController.changePhoto')
 Route.get('/admin/users/:id/photo', 'UserController.photo')
 
