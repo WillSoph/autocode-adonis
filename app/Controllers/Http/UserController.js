@@ -18,7 +18,7 @@ class UserController {
     }
 
     async index() {
-        return await User.all()
+        return await User.all() // equivalente ao select *
     }
 
     async show({ params }) {
