@@ -40,10 +40,10 @@ class RegisterController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async store({ request, response }) {
+  async store({ request }) {
     const data = request.only(['name', 'email', 'password'])
 
-    const user = await User.create(data)
+    const user = await user.create(data)
 
     return user
   }
